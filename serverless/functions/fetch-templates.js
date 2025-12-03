@@ -1,4 +1,4 @@
-const axios = require('axios').default;
+const axios = require('axios');
 const URL = "https://content.twilio.com/v1/Content"
 
 exports.handler = async function(context, event, callback) {

@@ -17,7 +17,7 @@ Easily set up and send out messaging campaigns using your Twilio account.
  * Send messages via the standard Messaging API or Broadcast API
  * Messaging Features: Scheduling, Link Shortening
  * Check numbers before sending to identify malformed numbers or non-mobile numbers (via Twilio Lookup API)
- * Supports multiple messaging channels (SMS, Whatsapp, Facebook Messenger)
+ * Supports multiple messaging channels (SMS, Whatsapp, RCS, Facebook Messenger)
  * Get Updated Message statuses to understand the final state of messages
 
 ### App features

@@ -121,7 +121,7 @@ const Logs = () => {
         else in_progress.push(i)
       }
       checkLog += "\n===> Delivered: " + JSON.stringify(delivered)
-      if(channelSelection === "Whatsapp")checkLog += "\n===> Read: " + JSON.stringify(read)
+      if(channelSelection === "Whatsapp" || channelSelection === "RCS")checkLog += "\n===> Read: " + JSON.stringify(read)
       checkLog += "\n===> Failed/Undelivered: " + JSON.stringify(failed)
       checkLog += "\n===> In-Progress: " + JSON.stringify(in_progress)
     }

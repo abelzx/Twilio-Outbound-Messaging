@@ -283,7 +283,7 @@ const CheckAndSend = () => {
     { lineTypeAlertClicked &&
       (<Alert severity="info">
         <AlertTitle>About Line Type Intelligence</AlertTitle>
-          Looking for line type can provide additional insights on the number itself. For example you can exclude landlines or VOIP numbers from your SMS campaigns. Not needed for Whatsapp campaigns.
+          Looking for line type can provide additional insights on the number itself. For example you can exclude landlines or VOIP numbers from your SMS campaigns. Not needed for Whatsapp or RCS campaigns.
           Additional charges apply. More information <a href="https://www.twilio.com/docs/lookup/v2-api/line-type-intelligence" target="_blank">here</a>
       </Alert>)
     }

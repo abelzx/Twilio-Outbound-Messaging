@@ -39,13 +39,16 @@ exports.prepareData = (event, sendType) => {
         let userObj = {}
 
         let phoneNumber = row[phoneNumberColumn]
-        if(channelSelection === "SMS" || channelSelection === "Whatsapp"){
+        if(channelSelection === "SMS" || channelSelection === "Whatsapp" || channelSelection === "RCS"){
           phoneNumber = normalizePhoneNumber(phoneNumber)
         }
         userObj['to'] = ""
         switch (channelSelection){
             case "Whatsapp":
                 userObj['to'] = `whatsapp:${phoneNumber}`
+                break;
+            case "RCS":
+                userObj['to'] = `rcs:${phoneNumber}`
                 break;
             case "FBM":
                 userObj['to'] = `messenger:${phoneNumber}`
@@ -100,7 +103,7 @@ exports.prepareData = (event, sendType) => {
 
 exports.getCorrectIndex = (csvData, phoneNumberColumn, userNumber) => {
 
-    if(userNumber.startsWith("whatsapp:") || userNumber.startsWith("messenger:")){
+    if(userNumber.startsWith("whatsapp:") || userNumber.startsWith("messenger:") || userNumber.startsWith("rcs:")){
       userNumber = userNumber.split(":")[1]
     }
     userNumber = normalizePhoneNumber(userNumber)

@@ -6,7 +6,7 @@ exports.checkAuth = (cookies, secret) => {
   if (!cookies.outbound_messaging_jwt) return setResponse(false, setTwilioResponseHeaders())
   
   try{
-    jwt.verify(cookies.outbound_messaging_jwt, secret);
+    jwt.verify(cookies.outbound_messaging_jwt, secret, { algorithms: ['HS256'] });
   } catch (error) {
     return setResponse(false, setTwilioResponseHeaders())
   }

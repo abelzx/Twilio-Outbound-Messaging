@@ -16,7 +16,6 @@
     "@mui/material": "latest",
     "@mui/x-data-grid": "^5.17.26",
     "@reduxjs/toolkit": "^1.9.7",
-    "@webscopeio/react-textarea-autocomplete": "^4.9.1",
     "date-fns": "^2.30.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
@@ -41,5 +40,10 @@
       "last 1 safari version"
     ]
   },
-  "proxy": "http://localhost:3102/"
+  "proxy": "http://localhost:3102/",
+  "overrides": {
+    "nth-check": "^2.1.1",
+    "postcss": "^8.4.31",
+    "webpack-dev-server": "^5.2.2"
+  }
 }
